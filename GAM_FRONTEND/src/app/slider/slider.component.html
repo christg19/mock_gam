@@ -1,0 +1,13 @@
+<ion-content>
+  <div class="horizontal-scroll">
+    <ion-card class="swipe-card" *ngFor="let card of cards">
+      <img src={{card.image}} alt="">
+      <ion-card-header>
+        <ion-card-title>{{ card.title }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{ card.content }}
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

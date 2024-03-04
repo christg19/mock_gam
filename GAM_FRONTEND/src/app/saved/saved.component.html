@@ -1,0 +1,61 @@
+<ion-content>
+  <div class="container">
+    <div class="navbar">
+      <app-navbar></app-navbar>
+    </div>
+    <div class="main">
+      <div class="card-list">
+        <div class="slider-container">
+          <swiper-container>
+            <swiper-slide *ngFor="let item of card">
+              <ion-card>
+                <ion-card-header>
+                  <ion-card-title>{{item.name}}</ion-card-title>
+                  <ion-card-subtitle></ion-card-subtitle>
+                </ion-card-header>
+
+                <ion-card-content>
+                  <div class="content-container">
+                    <div class="text-container">
+                      {{item.description}}
+                    </div>
+                    <div class="logo-container">
+                      <img [src]="item.image" loading="lazy" class="logo-image" />
+                    </div>
+                  </div>
+                </ion-card-content>
+              </ion-card>
+
+            </swiper-slide>
+          </swiper-container>
+        </div>
+      </div>
+      <div class="form">
+        <div class="form-title">
+          <p>Agrega una aseguradora</p>
+        </div>
+        <div class="form-inputs" [formGroup]="form">
+          <ion-list>
+            <ion-item>
+              <ion-input formControlName="name" aria-label="name" value=""
+                placeholder="Nombre de aseguradora"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input formControlName="description" aria-label="name" value="" placeholder="Descripción"></ion-input>
+            </ion-item>
+          </ion-list>
+          <div class="galery-image">
+            <app-camera (imageSelected)="onImageSelected($event)"></app-camera>
+            <div *ngIf="form.get('image')?.value">
+              <img [src]="form.get('image')?.value" class="img-select">
+            </div>
+          </div>
+          <div class="submit" (click)="onSubmit()">
+            <ion-button>Crear aseguradora</ion-button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</ion-content>

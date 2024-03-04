@@ -1,0 +1,152 @@
+.container {
+    background-color: #FFFFFF;
+
+}
+
+.navbar {
+    border: none;
+    border-bottom: 5px solid #f3f3f3;
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sub-title {
+    background-color: #004e84;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.test {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.insurers p {
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.insurer-a {
+    text-align: center;
+}
+
+.banner-text p {
+    margin: 0;
+}
+
+.insurer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80px;
+    padding: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 1px solid #1b73b2;
+}
+
+.card img {
+    width: 100px;
+    height: auto;
+}
+
+.card p {
+    margin-top: 10px;
+}
+
+.insurer-card img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.insurer-href {
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+}
+
+.banner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(0, 76, 140, 0.8) 100%), url('../../assets/insurers/banner.PNG');
+    width: 90%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+
+}
+
+.banner-text {
+    margin: 1rem;
+    width: 50%;
+}
+
+.banner-container p {
+    color: #f2dc67;
+    text-align: left;
+
+}
+
+.p-banner {
+    font-weight: bold;
+    font-size: 70px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 70%;
+    justify-content: center;
+}
+
+.buttons button {
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 12px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    height: 30px;
+    cursor: pointer;
+}
+
+.button {
+    border: none;
+    color: white;
+    min-width: 140px;
+    font-size: 16px;
+    background-color: #004e84;
+    cursor: pointer;
+    border-radius: 20px;
+    padding-bottom: 0.3rem;
+}

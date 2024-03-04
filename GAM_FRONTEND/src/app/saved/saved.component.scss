@@ -1,0 +1,133 @@
+.container {
+    background-color: #FFFFFF;
+    height: 100%;
+}
+
+.navbar {
+    border: none;
+    border-bottom: 5px solid #f3f3f3;
+}
+
+.card-list {
+    border: none;
+    border-bottom: 5px solid #f3f3f3;
+}
+
+.form-title,
+.form-inputs,
+ion-list,
+ion-item {
+    margin: 0;
+    padding: 0;
+}
+
+ion-card {
+    background-color: #f3f3f3 !important;
+}
+
+ion-card-title {
+    color: black !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.select-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.card-list {
+    margin-top: 1rem;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.centered-image {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-container {
+    color: black;
+}
+
+
+.logo-image {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.form {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    justify-content: center;
+   
+}
+
+.form-title {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #f3f3f3;
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+ion-item {
+    --background: white;
+    --border-color: white;
+    --ion-item-background: white;
+    --color: black;
+    --shadow: none;
+    border: none;
+}
+
+
+ion-input {
+    margin-top: 1rem;
+    border-bottom: 1px solid #a9a6a6 !important;
+    --placeholder-color: gray;
+    --background: white;
+    --color: black;
+}
+
+.galery-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 0.5rem;
+}
+
+.img-select {
+    width: 20%;
+    height: auto;
+}
+
+ion-input {
+    text-align: center;
+}
+
+.submit{
+    height: 100%;
+}

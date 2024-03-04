@@ -1,0 +1,38 @@
+.header-toolbar {
+    --background: #ffffff;
+    --color: #000000;
+}
+
+.header-title {
+    color: #000000;
+    text-align: start;
+    font-weight: bold;
+}
+
+.lito-img {
+    margin-left: 0.5rem;
+    width: 90px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.navbar-icon{
+    width: 90px;
+    height: auto;
+}
+
+.custom-icon-color {
+    color: #3880ff; 
+    margin-right: 1rem;
+    width: 30px;
+    height: 30px;
+  }
+
+  .icon{
+    font-weight: bold;
+  }
+  
+  ion-button {
+    --color: #000000; 
+  }
+  

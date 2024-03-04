@@ -1,0 +1,51 @@
+<ion-content style="height: 100%;">
+  <div class="container" >
+    <div class="navbar">
+      <app-navbar></app-navbar>
+      
+    </div>
+    <div class="main">
+      <div class="main-title">
+        <p>¿Qué quieres hacer hoy?</p>
+      </div>
+      <div class="sub-title">
+        <p>Cotizar una póliza</p>
+      </div>
+      <div class="insurers">
+        <div class="insurers-title">
+          <p>Aseguradoras más populares</p>
+        </div>
+        <div class="insurer-list">
+          <div class="card" *ngFor="let insurer of insurerList">
+            <img src="{{ insurer.logo }}">
+          </div>
+        </div>
+        <div class="test">
+          <div class="insurer-a">
+            <a href="/saved" class="insurer-href">
+              Ver más aseguradoras <span>></span>
+            </a>
+          </div>
+
+          <div class="banner-container">
+            <div class="banner-text">
+              <p>Renueva tu póliza hoy con hasta un
+                <span style="font-size: clamp(20px, 30px, 36px); font-weight: 800;">
+                  20% OFF
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="button">Inicia sesión aquí</button>
+            <button class="button">Regístrate aquí</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  
+
+</ion-content>
