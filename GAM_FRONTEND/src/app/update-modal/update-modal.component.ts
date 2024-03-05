@@ -11,7 +11,7 @@ import { Insurer } from '../shared/interfaces/insurer.interface';
   styleUrls: ['./update-modal.component.scss'],
 })
 export class UpdateModalComponent implements OnInit {
-  @Input() insurerId!: string; // Recibimos el ID del asegurador como parámetro de entrada
+  @Input() insurerId!: string; 
 
   editForm: FormGroup;
   insurer: Insurer | undefined;
@@ -72,13 +72,13 @@ export class UpdateModalComponent implements OnInit {
       const imageFile = inputElement.files[0];
       const reader = new FileReader();
       reader.onload = () => {
-        const base64String = reader.result as string; // Convierte el resultado del lector a una cadena base64
+        const base64String = reader.result as string; 
         const logoControl = this.editForm.get('logo');
         if (logoControl) {
           logoControl.setValue(base64String);
         }
       };
-      reader.readAsDataURL(imageFile); // Lee el contenido del archivo como una URL base64
+      reader.readAsDataURL(imageFile); 
     }
   }
 
@@ -97,7 +97,7 @@ export class UpdateModalComponent implements OnInit {
 
         await this.presentAlert('Aseguradora actualizada con éxito');
         this.editForm.reset();
-        this.dismissModal(); // Cerrar el modal después de actualizar
+        this.dismissModal(); 
       } catch (error) {
         console.error(error);
         await this.presentAlert('Hubo un error al actualizar los datos');
