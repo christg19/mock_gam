@@ -14,7 +14,7 @@
                   <ion-card-subtitle></ion-card-subtitle>
               
                   <ion-icon name="trash-outline" (click)="deleteInsurer(item._id)" class="delete-icon"></ion-icon>
-                  <ion-icon name="create-outline" *ngIf="insurer" (click)="editInsurer(insurer)" class="edit-icon"></ion-icon>
+                  <ion-icon name="create-outline" (click)="editInsurer(item)" class="edit-icon"></ion-icon>
 
 
                 </ion-card-header>
