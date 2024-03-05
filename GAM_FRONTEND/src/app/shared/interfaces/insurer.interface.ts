@@ -1,5 +1,6 @@
 export interface Insurer {
+    _id?:string;
     name:string;
     description?:string;
-    image:any
+    logo:string;
 }

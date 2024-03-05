@@ -1,8 +1,7 @@
-<ion-content style="height: 100%;">
-  <div class="container" >
+<ion-content >
+  <div class="container" style="height: 100dvh;">
     <div class="navbar">
       <app-navbar></app-navbar>
-      
     </div>
     <div class="main">
       <div class="main-title">
@@ -15,8 +14,13 @@
         <div class="insurers-title">
           <p>Aseguradoras más populares</p>
         </div>
-        <div class="insurer-list">
+        <div class="insurer-list" *ngIf="insurerList.length > 0">
           <div class="card" *ngFor="let insurer of insurerList">
+            <img src="{{ insurer.logo }}">
+          </div>
+        </div>
+        <div class="insurer-list" *ngIf="insurerList.length === 0">
+          <div class="card" *ngFor="let insurer of insurerListTest">
             <img src="{{ insurer.logo }}">
           </div>
         </div>
@@ -41,11 +45,7 @@
             <button class="button">Regístrate aquí</button>
           </div>
         </div>
-
       </div>
     </div>
   </div>
-
-  
-
 </ion-content>

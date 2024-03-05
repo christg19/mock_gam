@@ -12,13 +12,17 @@ import { SavedComponent } from './saved/saved.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SliderComponent } from './slider/slider.component';
 import { HttpClientModule } from '@angular/common/http';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, HomeComponent, SavedComponent, TabsComponent, CameraComponent, SliderComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ReactiveFormsModule, HttpClientModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ReactiveFormsModule, HttpClientModule, MatSnackBarModule],
   providers: [
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]

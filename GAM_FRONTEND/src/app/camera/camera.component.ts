@@ -17,12 +17,11 @@ export class CameraComponent implements OnInit {
     const image = await Camera.getPhoto({
       quality: 90,
       allowEditing: false,
-      resultType: CameraResultType.Uri,
+      resultType: CameraResultType.Base64, 
       source: CameraSource.Photos,
     });
-  
-    if (image.webPath) {
-      this.imageSelected.emit(image.webPath); 
+    if (image.base64String) {
+      this.imageSelected.emit(`data:image/${image.format};base64,${image.base64String}`);
     }
   }
   

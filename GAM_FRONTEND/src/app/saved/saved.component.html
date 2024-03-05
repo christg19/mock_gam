@@ -7,11 +7,16 @@
       <div class="card-list">
         <div class="slider-container">
           <swiper-container>
-            <swiper-slide *ngFor="let item of card">
+            <swiper-slide *ngFor="let item of insurerList">
               <ion-card>
                 <ion-card-header>
                   <ion-card-title>{{item.name}}</ion-card-title>
                   <ion-card-subtitle></ion-card-subtitle>
+              
+                  <ion-icon name="trash-outline" (click)="deleteInsurer(item._id)" class="delete-icon"></ion-icon>
+                  <ion-icon name="create-outline" *ngIf="insurer" (click)="editInsurer(insurer)" class="edit-icon"></ion-icon>
+
+
                 </ion-card-header>
 
                 <ion-card-content>
@@ -20,7 +25,7 @@
                       {{item.description}}
                     </div>
                     <div class="logo-container">
-                      <img [src]="item.image" loading="lazy" class="logo-image" />
+                      <img [src]="item.logo" loading="lazy" class="logo-image" />
                     </div>
                   </div>
                 </ion-card-content>
@@ -46,8 +51,8 @@
           </ion-list>
           <div class="galery-image">
             <app-camera (imageSelected)="onImageSelected($event)"></app-camera>
-            <div *ngIf="form.get('image')?.value">
-              <img [src]="form.get('image')?.value" class="img-select">
+            <div *ngIf="form.get('logo')?.value">
+              <img [src]="form.get('logo')?.value" class="img-select">
             </div>
           </div>
           <div class="submit" (click)="onSubmit()">

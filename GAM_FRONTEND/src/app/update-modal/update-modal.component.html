@@ -1,0 +1,26 @@
+<div class="form">
+  <div class="form-title">
+    <p>Editar aseguradora</p>
+  </div>
+  <div class="form-inputs" [formGroup]="editForm">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Nombre de aseguradora</ion-label>
+        <ion-input formControlName="name" placeholder="Nombre de aseguradora"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-input formControlName="description" placeholder="Descripción"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div class="galery-image">
+      <app-camera (imageSelected)="onImageSelected($event)"></app-camera>
+      <div *ngIf="editForm.get('logo')?.value">
+        <img [src]="editForm.get('logo')?.value" class="img-select">
+      </div>
+    </div>
+    <div class="submit" (click)="updateInsurer(insurerId)">
+      <ion-button>Editar aseguradora</ion-button>
+    </div>
+  </div>
+</div>

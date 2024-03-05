@@ -1,6 +1,6 @@
 .container {
     background-color: #FFFFFF;
-    height: 100%;
+    height: 100dvh;
 }
 
 .navbar {
@@ -130,4 +130,8 @@ ion-input {
 
 .submit{
     height: 100%;
+}
+
+.delete-icon{
+    color: black;
 }
