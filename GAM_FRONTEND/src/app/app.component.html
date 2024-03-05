@@ -4,7 +4,30 @@
       <ion-router-outlet></ion-router-outlet>
     </div>
     <div class="tabs">
-      <app-tabs></app-tabs>
+      <ion-tabs>
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button tab="home" tab="home">
+            <ion-icon name="home"></ion-icon>
+            <ion-label>Inicio</ion-label>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="favorites" tab="saved">
+            <ion-icon name="bookmark"></ion-icon>
+            <ion-label>Guardados</ion-label>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="policy">
+            <ion-icon name="document-text"></ion-icon>
+            <ion-label>Mi póliza</ion-label>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="help">
+            <ion-icon name="help-circle"></ion-icon>
+            <ion-label>Ayuda</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+      
     </div>
   </div>
 </ion-app>
